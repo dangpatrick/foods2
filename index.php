@@ -41,11 +41,14 @@ $f3->route('GET /breakfast', function(){
 
 });
 
+/*
+ * Route path/name does not have to match the physical file name - Local path can be apple and oranges 'GET /a/b/c' or luncharoo and still see my lunch.html page
+ */
 //Define a lunch route
-$f3->route('GET /lunch', function(){
+$f3->route('GET /lunch', function(){ //url - local route what we type in the search bar - anything u want ex GET/lunch/sanwhiches
 //    echo "Lunch!";
     $view = new Template();
-    echo $view->render('views/lunch.html');
+    echo $view->render('views/lunch.html'); // you can name this something else as well
 });
 
 
